@@ -19,8 +19,6 @@ class DankBot():
         elif self.DEF_BROWSER == 'Edge':
             self.driver = webdriver.Edge()
         self.driver.get(self.BASE_URL)
-        print("Please Login First")
-        print("Also select the channel where you want to the bot to work")
 
     def exec_base_script(self):
         self.type_box = self.driver.find_element_by_class_name(self.TYPE_BOX)
