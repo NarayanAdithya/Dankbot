@@ -17,4 +17,4 @@ jobs:
         uses: py-actions/flake8@v2
         with:
           ignore: "E402,F841,F401,E302,E305,W291,W605"
-          max-line-length: "120"
+          max-line-length: "200"
