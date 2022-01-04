@@ -14,7 +14,7 @@ setup(
     author_email='narayanadithya1234@gmail.com',      # Type in your E-Mail
     entry_points={'console_scripts': ['dankbot = dankbot.dankcli:run_bot']},
     url='https://github.com/NarayanAdithya/Dankbot',   # Provide either the link to your github or to your website
-    download_url='https://github.com/user/reponame/archive/v_01.tar.gz',    # I explain this later on
+    download_url='https://github.com/NarayanAdithya/Dankbot/archive/refs/tags/v_0.1-beta.tar.gz',    # I explain this later on
     keywords=['Discord', 'Automation', 'DankBot', 'Dank Memer'],   # Keywords that define your package best
     install_requires=requirements,
     classifiers=[
