@@ -1,8 +1,6 @@
 from distutils.core import setup
 from setuptools import find_packages
 
-with open('requirements_dev.txt') as req:
-    requirements = req.readlines()
 
 setup(
     name='DiscordDankBot',         
@@ -16,7 +14,7 @@ setup(
     url='https://github.com/NarayanAdithya/Dankbot',   
     download_url='https://github.com/NarayanAdithya/Dankbot/archive/refs/tags/v_0.1-beta.tar.gz',    
     keywords=['Discord', 'Automation', 'DankBot', 'Dank Memer'],  
-    install_requires=requirements,
+    install_requires=['selenium', 'windows-curses'],
     classifiers=[
         'Development Status :: 4 - Beta',     
         'Intended Audience :: Developers',      
