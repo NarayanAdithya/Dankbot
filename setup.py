@@ -5,7 +5,7 @@ from setuptools import find_packages
 setup(
     name='DiscordDankBot',         
     packages=find_packages(),
-    version='0.1.1',     
+    version='0.1.2',     
     license='MIT',        
     description='All in one bot to manage your dankmemer account. Easy automaton for grinding money and collectables.',  
     author='Adithya Narayan',                  
