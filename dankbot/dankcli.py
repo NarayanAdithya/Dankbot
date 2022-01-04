@@ -4,13 +4,6 @@ from dankbot import DankBot
 import time
 from threading import Thread
 
-# Pending Use Sync along with Threads and custom fucntions to achieve pseudo inter process communication
-
-def init_selenium_process(survive=10):
-    p = DankBot()
-    p.exec_base_script()
-
-
 def main(stdscr):
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
     curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
@@ -45,7 +38,33 @@ def main(stdscr):
     stdscr.addstr(4, 10, "4. Make sure there isn't any spam bot detector and you have the permissions.", curses.color_pair(2))
     stdscr.addstr(5, 10, "5. After all the above steps are done type in \"startprogram\" in console to start the bot", curses.color_pair(2))
     stdscr.addstr(6, 10, "6. To Stop The bot close the browser then the console or just type in \"killbot\"", curses.color_pair(2))
-    stdscr.getch()  
+    stdscr.addstr(20, 10, "Press Any Key To Activate The Program", curses.color_pair(2))
+    stdscr.getch()
+    bot = DankBot()
+    process = Thread(target=bot.start_thread)
+    process.start()
+    time.sleep(4)
+    stdscr.clear()
+    stdscr.refresh()
+    stdscr.addstr(0, 0, "Enter \"startbot\" to start the application: ", curses.color_pair(5))
+    s = stdscr.getstr(4, 0, 15)
+    stdscr.addstr(2, 0, s, curses.color_pair(2))
+    bot.start_bot()
+    stdscr.clear()
+    stdscr.refresh()
+    stdscr.addstr(0, 0, "Enter \"killbot\" to stop the application:    ", curses.color_pair(5))
+    s = stdscr.getstr(5, 0, 5)
+    stdscr.addstr(2, 0, s, curses.color_pair(2))
+    bot.terminate()
+    stdscr.clear()
+    stdscr.refresh()
+    stdscr.addstr(0, 0, 'Please Wait Ending All Processes.....', curses.color_pair(2))
+    while(bot.status != 'Ended'):
+        pass
+    stdscr.clear()
+    stdscr.refresh()
+    stdscr.addstr(0, 0, "Thank You For Using DankBot", curses.color_pair(1))
+    stdscr.getch()
 
-
-wrapper(main)
+def run_bot():
+    wrapper(main)
