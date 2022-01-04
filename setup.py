@@ -5,7 +5,7 @@ with open('requirements_dev.txt') as req:
     requirements = req.readlines()
 
 setup(
-    name='dankbot',         
+    name='DiscordDankBot',         
     packages=find_packages(),
     version='0.1',     
     license='MIT',        
