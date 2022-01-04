@@ -5,14 +5,14 @@ from setuptools import find_packages
 setup(
     name='DiscordDankBot',         
     packages=find_packages(),
-    version='0.1',     
+    version='0.1.1',     
     license='MIT',        
     description='All in one bot to manage your dankmemer account. Easy automaton for grinding money and collectables.',  
     author='Adithya Narayan',                  
     author_email='narayanadithya1234@gmail.com',     
     entry_points={'console_scripts': ['dankbot = dankbot.dankcli:run_bot']},
     url='https://github.com/NarayanAdithya/Dankbot',   
-    download_url='https://github.com/NarayanAdithya/Dankbot/archive/refs/tags/v_0.1-beta.tar.gz',    
+    download_url='https://github.com/NarayanAdithya/Dankbot/archive/refs/tags/v_0.1.1-beta.tar.gz',    
     keywords=['Discord', 'Automation', 'DankBot', 'Dank Memer'],  
     install_requires=['selenium', 'windows-curses'],
     classifiers=[

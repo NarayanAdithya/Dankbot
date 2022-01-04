@@ -1,6 +1,6 @@
 import curses
 from curses import wrapper
-from dankbot import DankBot
+from DiscordDankBot import DankBot
 import time
 from threading import Thread
 
